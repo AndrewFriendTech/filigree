@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- META -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <!----------->
+    <title>Choose a groups page</title>
+    <!-- LINKS -->
+	<link rel="stylesheet" href="stylesheets/choosegroups.css">
+    <!----------->
+
+    <!-- SCRIPTS -->
+	<!-- Turf library , works out the distance between points -->
+	<!-- for some reason for its points it's expect long first then lat -->
+	<script src="javascripts/turf.min.js"></script>
+	<!-- scripts for page functionality -->
+	<script src="javascripts/fetch-functions.js"></script>
+	<script src="javascripts/choosegroups/components/AddGroupComponent.js"></script>
+	<script src="javascripts/choosegroups/choosegroups.js"></script>
+    <!------------->
+</head>
+    <body>
+
+        <div class="triangle"></div>
+        <div class="triangle2"></div>
+        <div class="center-message">
+                <h1>
+                    Choose a group that you believe is relevant to you.
+                </h1>
+        </div>
+        
+        <!-- GROUP CONTAINER TO CHOOSE FROM-->
+        <div id ="group-container">
+            <div class ="group">
+                <p>Our group is about____. We enjoy ______, we are helping eah other to get better in _______.
+                If you feel like you want to participate add our group</p>
+                <button type="button">Add</button>
+            </div>
+            
+            <div class ="group">
+                <p>Our group is about____. We enjoy ______, we are helping eah other to get better in _______.
+                If you feel like you want to participate add our group</p>
+                <button type="button">Add</button>
+            </div>
+            
+            <div class ="group">
+                <p>Our group is about____. We enjoy ______, we are helping eah other to get better in _______.
+                If you feel like you want to participate add our group</p>
+                <button type="button">Add</button>
+            </div>
+            
+            <div class ="group">
+                <p>Our group is about____. We enjoy ______, we are helping eah other to get better in _______.
+                If you feel like you want to participate add our group</p>
+                <button type="button">Add</button>
+            </div>
+            
+            <div class ="group">
+                <p>Our group is about____. We enjoy ______, we are helping eah other to get better in _______.
+                If you feel like you want to participate add our group</p>
+                <button type="button">Add</button>
+            </div>
+		</div>
+        <!----------------------------------->
+		
+        <!-- NEXT PAGE BUTTON-->
+		<button id = "next-button">Next</button>
+        <!--------------------->
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<form id = "uploadForm" action="/api/upload" method="post" enctype="multipart/form-data">
+	<input id = "fileInput" type="file" name="avatar" multiple />
+	<input type="submit"/> 
+</form>
+
+<script src = "/javascripts/fetch-functions.js"></script>
+
+<script>
+	//form the upload section is in 
+	const myForm = document.getElementById('uploadForm');
+	//form of the actual section
+	const fileInput = document.getElementById('fileInput');
+	//getting the token from the local storage
+	const credentials = JSON.parse(localStorage.getItem("credentials"));
+	const token = credentials.token;
+
+	//event listner for when the user presses submut
+	myForm.addEventListener("submit", e=>{
+		//stoped the default behaviour which is to load a new page
+		e.preventDefault();
+		//post the file selected to the server
+		postFileWithToken("/api/upload",fileInput,token, 
+			response => {
+				//simmply logged the returned filenames to the server
+				console.log(response)
+			});
+	})
+</script>

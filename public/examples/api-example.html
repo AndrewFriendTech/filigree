@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<!-- object functions -->
+		<script src = "/javascripts/fetch-functions.js"></script>
+		<!-- main page script -->
+		<script>
+			//run when the window is loaded
+			window.onload =()=>{
+				document.getElementById("submit").onclick = ()=>{
+					var inputValue = document.getElementById("user-input").value;
+					var queryUrl = `/api/user/${inputValue}/profile`;
+					getObj(queryUrl,(result) =>{
+						var container = document.getElementById("container");
+						if(result.error){
+							container.innerHTML = `<h1>Can not find ${inputValue}</h1>`;
+						}
+						else{
+							container.innerHTML =
+							`<h1>${result.username}</h1>
+							<p>${result.fullname}</p>`
+						}
+					})
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input id = "user-input" type="text">
+		<button id ="submit">Submit</button>
+		<div id = "container">
+
+		</div>
+	</body>
+</html>

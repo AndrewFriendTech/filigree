@@ -1,0 +1,146 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: linear-gradient(to bottom right, #98ff98, #7be27d,  #5fc663, #41aa4a, #1e8f31, #007417, #005b00, #004200); 
+    height: 100vh;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 45px;
+    width: 100%;
+    right: 130px;
+}
+
+li{
+    display: inline;
+    float: right; 
+}
+
+li a {
+    display: block;
+    
+    color: #A8FF8F;
+    letter-spacing: 3px;
+    text-align: center;
+    padding: 14px 26px;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    background-image: linear-gradient(to right, #A8FF8F,#A8FF8F);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+
+a:hover, a:focus {
+    background-size: 100% 2px;
+}
+
+.logo_sec{
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 45px;
+    left: 100px;;
+    width: 25%;
+}
+
+.logo_sec h3{
+    text-align: center;
+    color: #A8FF8F;
+}
+
+
+
+
+.center_message{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.center_message h1{
+    text-align: center;
+    color: #A8FF8F;
+    text-shadow: 2px 3px 0px #001e00;
+    padding: 0 0 20px 0;
+    font-size: 60px;
+    font-weight: bold;
+    font-weight: 900;
+}
+
+.center_message p{
+    text-align: center;
+    font-weight: 800;
+    color: #A8FF8F;
+}
+
+
+.submit_sec1{
+    position: absolute;
+    top: 120%;
+    left: 40%;
+    transform: translate(-50%, -50%)
+}
+
+.submit_sec2{
+    position: absolute;
+    top: 120%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+
+.submit_sec1 a,
+.submit_sec2 a{
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 750;
+    border: 1px solid black;
+    border-radius: 60px;
+    color: #808000;
+    background: #40ea29;
+    padding: 5px 30px 5px 30px;
+    box-shadow: 10px 10px 20px#A8FF8F
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>About Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/aboutpage.css">
+</head>
+<body>
+<div class="intro">
+    <h1 class="logo-header">
+        <span class="logo">F</span><span class="logo">i</span><span class="logo">l</span><span class="logo">i</span><span class="logo">g</span><span class="logo">r</span><span class="logo">e</span><span class="logo">e.</span>
+    </h1>
+</div>
+<header>
+    <div class="section">
+        <div class="wrapper">
+            <article class="banner-info">
+                <h2>Filigree: The Student's Network</h2>
+                <p>Filigree is a social media platform for students, with a plethora of tools and features to make the study life more productive and give more chances for students to socialise through the topic of their studies. We also utilise google maps in conjunction with a calendar to allow the easy planning of meetups, in addition we provide all the tool required for you to organise clubs and after class meet ups.</p>
+                <h3>Getting Started</h3>
+                <p>This short video will guide you through all the features of filigree including managing clubs, adding classmate, scheduling meeting to beginning your exploration by registering with us! Down below are the links to sign up or if your already one of our member to logging in to your account!</p>
+            </article>
+            <div class="button">
+                <a href="login.html"><button class="Signin">Sign in!</button></a>
+                <a href="registration.html"><button class="Register">Register!</button></a>
+            </div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ddsnrEZVzdE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+</header>
+
+<script>
+    let intro = document.querySelector('.intro');
+    let logo = document.querySelector('.logo-header');
+    let logoSpan = document.querySelectorAll('.logo');
+    
+    window.addEventListener('DOMContentLoaded', ()=>{
+    
+        setTimeout(()=>{
+            logoSpan.forEach((span, idx)=>{
+                setTimeout(()=>{
+                    span.classList.add('active');
+                }, (idx + 1) * 200)
+            })
+            setTimeout(()=>{
+                logoSpan.forEach((span, idx)=>{
+                    setTimeout(()=>{
+                        span.classList.remove('active');
+                        span.classList.add('fade');
+                    }, (idx + 1) * 50)
+                })
+            }, 3300)
+            setTimeout(()=>{
+                intro.style.top = "-100vh";
+            }, 4000)
+        })
+    })
+</script>
+</body>
+</html>

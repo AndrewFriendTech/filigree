@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Log_in Page</title>
+    <!-- META -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <!----------->
+    <!-- LINKS -->
+	<link rel="stylesheet" href="stylesheets/log_in_page.css">
+    <!----------->
+    <!-- SCRIPTS -->
+	<script src = "javascripts/fetch-functions.js"></script>
+	<script>
+		window.onload = function (){
+			document.getElementById("submit_button").onclick = function(){
+				let username = document.getElementById("username").value;
+				let password = document.getElementById("password").value;
+				postObj("/api/login",{username:username,password:password}, (response) => {
+					//stores the item in local storage so you can reuse it later
+					if(response.error){
+						document.getElementById("error-box").innerHTML = `<h3 class="error">Username or Password is Incorrect!!</h3>`;
+						//add in future redirect to main page
+					}else {
+						localStorage.setItem("credentials", JSON.stringify(response));
+						window.location.href = "/main.html";
+
+					}
+
+					
+				})
+				
+			}
+		};
+	</script>
+    <!------------->
+</head>
+    <body>
+        <div class="triangle"></div>
+        <div class="triangle2"></div>
+
+
+        <!-- CONTAINER FOR FORM -->
+        <div class = "centre">
+            <h1>Login</h1>
+            <!-- LOGIN FORM -->
+            <div>
+                <div class="text_box">
+                    <input id = "username" type="text" required>
+                    <label>Username</label>
+                </div>
+                
+                <div class="text_box">
+                    <input id = "password" type="password" required>
+                    <label>Password</label>
+                </div>
+                
+                <div class="submit_button">
+                    <input id = "submit_button" type="submit" value="Submit">
+				</div>
+				
+				<div id="error-box">
+					<!-- Notifys the user if he gets the wrong username. -->
+				</div>
+                
+                <div class="register_link">
+                    Register if not a member?
+                    <a href="/registration.html">Register now</a>
+                </div>
+            </div>       
+            <!---------------->
+        </div>
+        <!------------------------>
+    </body>
+</html>

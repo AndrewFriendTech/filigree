@@ -1,0 +1,67 @@
+
+body{
+    background: rgb(185, 185, 185);
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+#main{
+    background-color: #003B73;
+    max-width: 600px;
+    margin: auto;
+    padding: 1.5%;
+    border-radius: 30px;
+}
+
+.input-container{
+    margin: 1%;
+}
+
+.input-container input,.input-container textarea{
+    border-radius: 8px; 
+}
+
+.input-container input {
+    height: 3em;
+}
+
+#title{width: 70%;} #user{width: 50%;}
+
+.input-container textarea{
+    min-height: 300px;
+    max-height: 60%;
+    width: 95%;
+
+}
+
+.input-container label{
+    font-weight: bold;
+}
+
+#page-title{
+	text-align: center;
+	background-color: #003B73;
+	border-radius: 10px;
+	margin-left: auto;
+	margin-right:auto;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	max-width: fit-content;
+	padding:1%;
+}
+
+button{
+    padding: 3%;
+    font-size: larger;
+    margin: 1%;
+    border-radius: 10px;
+}
+
+#error{
+    color: red;
+    font-weight: bold;
+}
+
+h1, label{
+    color: white;
+}

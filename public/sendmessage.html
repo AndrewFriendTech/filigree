@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Send a Message</title>
+        <!-- helper script -->
+        <script src = "javascripts/fetch-functions.js"></script>
+        <link rel = "stylesheet" href = "stylesheets/sendmessage.css">
+        <!-- meta viewport for better mobile rendering -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1 id = "page-title">Send A Private Message</h1>
+        <div id = "main">
+            <div id = "form">
+                <div class = "input-container">
+                    <label for="user" class="user">User:</label>
+                    <input id = "user" class="user">
+                </div>
+                <div class = "input-container">   
+                    <label for="title">Title:</label>
+                    <input id = "title">
+                </div>
+                <div class = "input-container">
+                    <label for="body">Body:</label>
+                    <br>
+                    <textarea id = "body"></textarea>
+                </div>
+                <button id = "submit">Submit</button>
+            </div>
+        </div>
+        <!-- page script -->
+        <script src= "javascripts/sendMessage/sendMessage.js"></script>
+    </body>
+</html>

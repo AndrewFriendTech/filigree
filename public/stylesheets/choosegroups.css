@@ -1,0 +1,283 @@
+/*****************************************
+*
+* Authors: Olayinka Balogun, Arek Nowacki.
+*
+*****************************************/
+.triangle {
+    margin: 0;
+    padding: 0;
+    clip-path: polygon(70% 0%, 100% 0, 0 70%, 0 0);
+    width:100%;
+    height:250px;
+    background:#777777;
+    position: fixed;
+    top: 0px;
+    z-index: -99;
+    
+}
+
+.triangle2{
+    margin: 0;
+    padding: 0;
+    clip-path: polygon(100% 30%, 0% 100%, 100% 100%);
+    width:100%;
+    height:250px;
+    background:#777777;
+    display: block;
+    position: fixed;
+    bottom:0px;
+    z-index: -99;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(185, 185, 185);
+    height: 100vh;
+}
+
+/* H1 tag for top message */
+.center-message h1{
+    /* Display & Box Model */
+    padding: 1rem;
+
+    /* Colors & Effects */
+     color:white;
+     background-color: #003B73AA;
+    
+
+    /* Text related */
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    font-weight: 900;
+    width: 70%;
+    margin-left: 15%;
+    border-radius: 25px;
+}
+
+/* Container for the groups */
+#group-container{
+    /* Display & Box Model */
+    margin-top: 15px;
+    margin-bottom: 25px; /*25*/
+    display: grid;
+    grid-template-columns: 300px 380px;
+    grid-auto-rows: minmax(100px, auto);
+    grid-row-gap: 60px;
+    grid-column-gap: 20px; 
+    justify-content: center;
+    align-content: stretch;
+    height: 45vh;
+}
+
+/* All groups */
+.group {
+    /* Display & Box Model */
+    display: flex;
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    /* Colors & Effects */
+    border-radius: 15px;
+    background-color: #003B73;
+    box-shadow: 0px 0px 14px 0.5px rgb(0, 0, 0);
+    min-height: 150px;	
+}
+
+.group-details {
+    width:70%;
+}
+
+/* Text seen on each group */
+.group-data {
+    /* Display & Box Model */
+    margin-top: 10px;
+    margin-bottom: 10px; 
+    max-width:470px;
+
+    /* Text & Colors */
+    font-size: 16px;
+    text-align: center;
+    font-weight: 700;
+    color: white;
+}
+
+.group p{
+    color: white;
+    margin-left: 100px; 
+
+}
+
+.group-description {
+    max-width: 470px;
+}
+
+.group-name {
+    font-size: 20px;
+}
+
+.group-img{
+    /* Display & Box Model */
+    height:100%;
+    max-height: 100px;
+    margin-left: 20px;
+    margin-top: 15px;
+
+    /* Colors & Effects */
+    border: 3px solid black;
+	border-radius: 50%;
+}
+
+#next-button{
+    /* Positioning */
+    /* position: sticky; */
+    float: right;
+    top: 20%;
+    bottom: 50%;
+    right: 10%;
+    
+    height: 50px;
+    width: 140px;
+    
+    /* Text & Colors */
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    background-color: #60A3D9;
+    color: black;
+    border-radius: 30px;
+    border: 2px solid black;
+    text-decoration: none;
+    outline: none;
+    
+}
+
+/* Buttons inside each groups */
+#group-container button{
+    /* Positioning */
+    position: sticky;
+    
+    /* Display & Box Model */
+    height: 40%;
+    width: 30%;
+    padding: 3%;
+    padding: 5px 0px 5px 0px;
+    margin-right:  5%;
+    margin-left:  5%;
+    margin-top: 4%;
+    
+    /* Text & Colors */
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    background-color: #60A3D9;
+    color: black;
+    border-radius: 30px;
+    border: 2px solid black;
+    text-decoration: none;
+    outline: none;
+}
+
+/* On buttons effect */
+#next-button:hover,
+#group-container button:hover{
+    background-color: #BFD7ED;
+    opacity: 1;
+}
+
+
+/* Media queries
+******************************************/
+@media (max-width: 1270px) {
+    #next-button{
+        /* Positioning */
+        /* position: absolute; */
+        float: right;
+        top: 735px;
+        right: 40%;
+        left: 40%;
+        height: 50px;
+        width: 140px;
+    }
+}
+
+@media (max-width: 1110px) {
+    #next-button{
+        /* Positioning */
+        top: 810px;
+    }
+}
+
+@media (max-width: 730px) {
+    #group-container {
+        grid-template-columns: 200px 280px;
+        grid-auto-rows: minmax(100px, auto);
+        grid-row-gap: 15px;
+    }
+
+    .group{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .group-data {
+        font-size: 13px;
+    }
+    
+    #group-container button{
+        /* Positioning */
+        /* position: sticky; */
+    
+        /* Display & Box Model */
+        height: 40px;
+        width: 200px;
+    }
+}
+
+@media (max-width: 540px) {
+    #group-container{
+        grid-template-columns: 80px 220px !important;
+        grid-auto-rows: minmax(350px, auto);
+        grid-row-gap: 15px;
+    }
+
+    .group {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .group-data  {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 8px;
+    }
+    
+    /* Buttons inside each groups */
+    #group-container button{
+        height: 30px;
+        min-width: 80px;
+        margin-bottom: 50%;
+        margin-top:50%;
+        top: 20px;
+    }
+    
+    /* comment out next button positining for now, let it render normally at bottom */
+
+    /* #next-button{
+        /* Positioning *//*
+        position: absolute;
+        float: right;
+        top: 2200px;
+        left: 35%;
+        height: 50px;
+        width: 140px;
+    }  */
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Registration</title>
+		<!-- LINKS -->
+		<link rel="stylesheet" href="stylesheets/registration.css">
+		<!----------->
+		<!-- SCRIPTS -->
+		<script src = "javascripts/registration.js"></script>
+		<script src = "javascripts/fetch-functions.js"></script>
+		<!------------->
+	</head>
+	<body>
+        <div class="triangle"></div>
+        <div class="triangle2"></div>
+
+        <!-- CONTAINER FOR FORM -->
+		<div class="container">
+            <h1>Registration</h1>
+			<!-- REGISTER FORM -->
+            <div id = "form">
+				<label for="username">Username:</label>
+				<input type="text" placeholder="Enter Username" name="username" id="username">
+				<label for="fullname">Full Name:</label>
+				<input type="text" placeholder="Enter Full Name" name="fullname" id="fullname">
+				<label for="email">Email:</label>
+				<input type="text" placeholder="Enter Email" name="email" id="email">
+				<label for="password">Password:</label>
+				<input type="password" placeholder="Enter Password" name="password" id="password">
+				<label for="repeatPassword">Repeat Password:</label>
+				<input type="password" placeholder="Repeat Password" name="repeatPassword" id="repeatPassword">
+				<label for= "locationContainer">Location:</label>
+				<!-- Autocomplete adress box, using the google maps Autocomplete widget see: 
+				https://developers.google.com/maps/documentation/javascript/places-autocomplete
+				-->
+				<input type="text" id = "locationInput">
+				<!-- upload profile photo section -->
+				<form id = "uploadForm" action="/api/upload" method="post" enctype="multipart/form-data">
+					<label for="fileInput">Upload Profile Picture:</label>
+					<br>
+					<input id = "fileInput" type="file" name="avatar" />
+					<input type="submit"/> 
+				</form>				
+				<button class="btn" type="submit" id = "submit"> Sign Up</button>	
+				<a href="login.html"><button class="btn" formaction="index.html">Existing Users</button></a>     
+            </div>
+		    <!------------------->
+            
+        </div>
+		<!------------------------>
+		<!-- GOOGLE MAPS API (JS) -->
+		<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnA_I-YpIzQygrq7bXWHne_P6eUOtiXso&libraries=places&callback=initMap">
+		</script>
+    </body>
+</html>

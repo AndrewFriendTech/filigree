@@ -1,0 +1,373 @@
+html { 
+    height: 99%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*body of the website*/
+body {
+    background: rgb(185, 185, 185);
+    overflow-y: scroll;
+    height: 99%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*Setting sizes for the side bars*/
+#groupSideBar, #profileSideBar {
+    height: 100%;
+    width: 25%;
+    background-color: #003B73;
+    float: left;
+    overflow: auto;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+
+/*Setting size for mainbody/Posts*/
+#mainBody {
+    background-color: #003B73;
+    height: 100%;
+    width: 48%;
+    float: left;
+    margin-left: 1%;
+    margin-right: 1%;
+    border-radius: 10px;
+    overflow: scroll;
+}
+
+/*Rearranges the page when width falls below 800px*/
+@media screen and (max-width: 800px) {
+    #groupSideBar, #profileSideBar, #mainBody {
+        width: 100%;
+        margin-left: 0%;
+        margin-bottom: 3%;
+    }
+}
+
+/*Groups Panels*/
+.groups {
+    background-color: #BFD7ED;
+    width: 90%;
+    min-height: 5%;
+    height: auto;
+    max-height: 15%;
+    float: left;
+    position: relative;
+    margin-left: 5%;
+    margin-bottom: 6%;
+    top: 5%;
+    transform: translateY(-10%);
+    border-radius: 30px;
+}
+
+/*Image space of group within the panel*/
+.groups .image{
+    width: 40%;
+    height: 15%;
+    float: left;
+    overflow:hidden;
+}
+
+/*Image in the groups panel*/
+.groups .image img{
+    float: left;
+    width: 100%;
+    height: 100%;
+    max-width: 110px;
+    max-height: 100px;
+    margin-top: 8%;
+    margin-left: 3%;
+    border-radius: 100%;
+    overflow:hidden;
+}
+
+/*Text space next to the image inside of the groups panels*/
+.groups .text {
+    width: 60%;
+    height: auto;
+    float: left;
+    padding-top: 5%;
+}
+
+/*Text inside the groups panels*/
+.groups p {
+    color: green; 
+    font-size: 1vw;
+}
+
+/*Main body title pace*/
+.bodyTitle {
+    border-radius: 30px;
+    margin-top: 1%;
+    width: 40%;
+    height: auto;
+    position: relative;
+    left: 30%;
+	transform: translateX(-50);
+	align-items: center;
+	text-align: center;
+	font-size: 2rem;
+	font-weight: bold;
+    padding-top: 0.5%;
+    color:white;
+}
+
+
+#backButton {
+    border-radius: 30px;
+    margin-top: 1%;
+    background-color: rgb(221, 221, 221);
+    width: 20%;
+    position: relative;
+	transform: translateX(-50);
+	align-items: center;
+	text-align: center;
+	font-size: x-large;
+	font-weight: bold;
+}
+
+
+/*Main body title text*/
+/* .bodyTitle h3 {
+    margin-top: 1%;
+    text-align: center;
+    margin: 0 auto;
+} */
+
+
+.bodyMessageBody {
+    overflow-y: scroll;
+}
+
+#mainBody::-webkit-scrollbar {
+    display: none;
+}
+
+/*Each post on the main message board*/
+.Post {
+    background-color: #BFD7ED;
+    width: 95%;
+    height: 20%;
+    margin-bottom: 2%;
+    margin-left: 2%;
+    margin-top: 2%;
+    border-radius: 10px;
+}
+
+.Post .postTitle{
+    width: 100%;
+    height: 25%; 
+}
+
+.Post .postBody{
+    width: 100%;
+    height: 60%;
+}
+
+.Post  .postMeta{
+    width: 100%;
+    height: 15%;
+}
+
+.Post  .postMeta .replies{
+    width: 30%;
+    float: left;
+    text-align: center;
+}
+
+.Post h3 {
+    text-align: center;
+}
+
+.Post p{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.Post  .postMeta .OP{
+    width: 40%;
+    float: left;
+    
+}
+
+.Post  .postMeta .timeCreated{
+    width: 30%;
+    float: left;
+}
+
+/*Actions corresponding the currently selected group in the profile side bar*/
+#groupActions {
+    background-color: #003B73;
+    width: 97%;
+    margin-left: 1.5%;
+    margin-top: 1%;
+    height: 45%;
+    border-radius: 10px;
+    overflow: auto;
+}
+
+/**/
+#groupActions .header{
+    font-size: 1.7vw;
+    width:100%;
+    text-align: center;
+    color: white;
+} 
+
+/*Group options panel*/
+#groupActions .action {
+    background-color: #003B73;
+    width: 95%;
+    height: 10%;
+    margin-left: 2.5%;
+    margin-bottom: 6%;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+/*Group buttons*/
+.action .btn {
+    width: 100%;
+    height: 100%;
+    background-color: #BFD7ED;
+    color: rgb(0, 0, 0);
+    border: 1.6px solid black;
+    border-radius: 25px;
+    font-size: 1.65rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn:hover {
+    background-color: #60A3D9;
+    opacity: 1;
+  }
+
+/*User profile panel*/
+.userProfile {
+    background-color: #003B73;
+    width: 97%;
+    margin-left: 1.5%;
+    margin-top: 2%;
+    padding-top: 10%;
+    height: 34%;
+    border-radius: 10px;
+    color: white;
+}
+
+/*Dividing user panel into picture and details*/
+.profileDetails, .profilePicture {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+/*Picture half of profile*/
+.profilePicture img{
+    width: 90%;
+    height: auto;
+    max-width: 500px;
+    margin-top: 10%;
+    margin-left: 5%;
+    border-radius: 100%;
+}
+
+/*Details of profile*/
+.profileDetails p {
+    text-align: center;
+    font-size: 1.3vw;
+}
+
+
+/* mesage box css
+*************** */
+#messages{
+	height: 80%;
+	max-height: 80%;
+	overflow: scroll;	
+}
+
+/*Each post on the main message board*/
+.message {
+    max-width: 60%;
+    margin-bottom: 2%;
+    margin-left: 2%;
+    margin-top: 2%;
+	border-radius: 10px;
+	padding: 0.4em;
+}
+
+/* post by the browsing user */
+.byMe {
+	background-color: lightblue ;
+	text-align: right;
+	margin-left:auto;
+	margin-right:0;
+	align-content:right;
+}
+
+/* posts by other users */
+.byOther{
+	background-color: lightgrey ;
+	margin-left:0;
+	margin-right:auto;
+	text-align: left;
+	
+}
+
+#messageBody{
+	width: 80%;
+	height: 20%;
+}
+
+#sendMessage{
+	font-size: x-large;
+	margin-bottom: 1rem;
+}
+
+ /* buttons at top of the list of threads */
+ .threads-action{
+    font-size: large;
+    border-radius: 10px;
+}
+
+#memberList a, #fileList a{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+}
+
+#groupActions a{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+}
+
+#memberList a:hover, #fileList a:hover{
+    color: #BFD7ED;
+}
+
+#actions-back {
+    font-size: large;
+    border-radius: 10px;
+}
+
+/* buttons on sidebar which say subscribe to new group and create new group  */
+
+.group-btn{
+    /* width: 100%;
+    height: 100%; */
+    background-color: #BFD7ED;
+    color: rgb(0, 0, 0);
+    border: 1.6px solid black;
+    border-radius: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: large;
+    display: block;
+    padding: 3%;
+    margin: 1%;
+}
+.group-btn:hover {
+    background-color: #60A3D9;
+    opacity: 1;
+  }

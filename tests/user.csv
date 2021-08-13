@@ -1,0 +1,56 @@
+user.js tests,,,,,,
+,<word> indicates placeholder,defect testing,,,,
+,,,,,,
+,,,,,,
+validation testing,,,,,,
+test,request,body,headers,output,database,comments
+creating a user, POST /api/user,"{""username"":""testUser"",  ""fullname"":""Test User"", ""password"":""testPassword""}",n/a,"{
+    ""success"": ""user posted""
+}",yes,"output was too verbose on first try, redone to fit conventions of other routes. Also provided no error message to notify user that username tried doesnt already exist. Redone more fitting to prevailing style"
+login user,POST /api/login,"{""username"":""testUser"",  ""password"":""testPassword""}",n/a,"{
+    ""token"": ""<token of testUser>"",
+    ""username"": ""testUser""
+}",yes,
+getting a user profile,GET /api/user/elBarto88/profile,n/a,Authorization: Bearer <token of testUser>,"{
+    ""username"": ""ElBarto88"",
+    ""fullname"": ""Bart Simpson"",
+    ""friends"": [],
+    ""location"": {
+        ""coordinates"": [
+            100,
+            20
+        ],
+        ""_id"": ""600c95a7a4ec284ac5554677"",
+        ""type"": ""Point""
+    },
+    ""createdAt"": ""2021-01-23T21:31:19.088Z""
+}",n/a,"noticed on first try, groups was not indcluded"
+getting current user profile,GET /api/user/current/profile ,n/a,Authorization: Bearer <token of testUser>,"{
+    ""username"": ""testUser"",
+    ""fullname"": ""Test User"",
+    ""friends"": [],
+    ""createdAt"": ""2021-02-06T22:40:37.104Z""
+}",n/a,
+adding user to group,POST /api/user/current/groups/601a94275f127d29d779c94d,n/a,Authorization: Bearer <token of testUser>,{"success": "group joined"},yes,
+removing user from group,DELETE /api/user/current/groups/601a94275f127d29d779c94d,n/a,Authorization: Bearer <token of testUser>,{"success":"user has left group"},yes,
+add a friend,POST /api/user/current/addFriend/elBarto88,n/a,Authorization: Bearer <token of testUser>,{"success":"user added to friends list"},yes,
+removing friend,DELTE /api/user/current/removeFriend/elBarto88,n/a,Authorization: Bearer <token of testUser>,{"success":"user has been deleted from friends list"},yes,
+send message,POST /api/user/ElBarto88/messages,{"body":"Hello"},Authorization: Bearer <token of testUser>,{"success":"message sent"},yes,
+check messages,GET /api/user/current/messages,n/a,Authorization: Bearer <token of ElBarto88>,"{
+    ""_id"": ""600c95a7a4ec284ac5554676"",
+    ""messages"": [
+        {
+            ""_id"": ""601ebc6b52f4f933a49697c2"",
+            ""body"": ""hello bart"",
+            ""username"": ""Andy332"",
+            ""updatedAt"": ""2021-02-06T15:57:31.673Z"",
+            ""createdAt"": ""2021-02-06T15:57:31.673Z""
+        },
+        {
+            ""_id"": ""601ebd1b303f4a34f0a9641c"",
+            ""body"": ""how have you been doing?"",
+            ""username"": ""Andy332"",
+            ""updatedAt"": ""2021-02-06T16:00:27.887Z"",
+            ""createdAt"": ""2021-02-06T16:00:27.887Z""
+        },
+        {",n/a,"First attempt got back a 500 error, error was missing quoatation marks, fixed on seccond attempt"

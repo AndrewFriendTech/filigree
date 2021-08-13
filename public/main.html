@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Main Page</title>
+        <!-- LINKS -->
+		<link rel="stylesheet" href="stylesheets/mainpage.css">
+        <!----------->
+		<!-- SCRIPTS -->
+		<!-- Helper functions -->
+		<script src = "javascripts/fetch-functions.js"></script>
+		<script src = "javascripts/main/main.js"></script>
+		<script src = "javascripts/dateString.js"></script>
+		<script src = "javascripts/notifySound.js"></script>
+		<!-- Components -->
+		<script src = "javascripts/main/components/GroupComponent.js"></script>
+		<script src = "javascripts/main/components/GroupSidebarComponent.js"></script>
+		<script src = "javascripts/main/components/ThreadComponent.js"></script>
+		<script src = "javascripts/main/components/ThreadContainerComponent.js"></script>
+		<script src = "javascripts/main/components/MessageComponent.js"></script>
+		<script src = "javascripts/main/components/MessageContainerComponent.js"></script>
+		<script src = "javascripts/main/components/NewThreadComponent.js"></script>
+		<script src = "javascripts/main/components/GroupActions/ViewMembersComponent.js"></script>
+		<script src = "javascripts/main/components/GroupActions/GroupActionsComponent.js"></script>
+        <script src = "javascripts/main/components/GroupActions/leaveGroup.js"></script>
+        <script src = "javascripts/main/components/GroupActions/ViewFilesComponent.js"></script>
+		<!------------->
+		<!-- viewport meta tag, makes it work better on mobiles -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <!-- LEFT SIDE OF THE PAGE FOR USERS' GROUPS -->
+        <div id="groupSideBar">
+            <div class="groups">
+                <div class="image">
+                    <img src="images/electronics-1242930.jpg" alt="Computer Science Group">
+                </div>
+                <div class="text">
+                    <h3>Computer Science</h3>
+                </div>
+            </div>
+
+            <div class="groups">
+                <div class="image">
+                    <img src="images/electronics-1242930.jpg" alt="Computer Science Group">
+                </div>
+                <div class="text">
+                    <h3>Computer Science</h3>
+                </div>
+            </div>
+
+            <div class="groups">
+                <div class="image">
+                    <img src="images/electronics-1242930.jpg" alt="Computer Science Group">
+                </div>
+                <div class="text">
+                    <h3>Computer Science</h3>
+                </div>
+            </div>
+
+            <div class="groups">
+                <div class="image">
+                    <img src="images/electronics-1242930.jpg" alt="Computer Science Group">
+                </div>
+                <div class="text">
+                    <h3>Computer Science</h3>
+                </div>
+            </div>
+
+            <div class="groups">
+                <div class="image">
+                    <img src="images/electronics-1242930.jpg" alt="Computer Science Group">
+                </div>
+                <div class="text">
+                    <h3>Find More Groups</h3>
+                </div>
+            </div>
+        </div>
+        <!------------------------------------------>
+
+        <!-- POST BOARD FOR TOPICS OF USERS' INTERESTS-->
+        <div id="mainBody">
+            <div class="bodyTitle"><h1>Title</h1></div>
+            <div class="bodyMessageBoard">
+                <div class="Post">
+                    <div class="postTitle">
+                        <h3>Title of Post</h3>
+                    </div>
+
+                    <div class="postBody">
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        </p>
+                    </div>
+
+                    <div class="postMeta">
+                        <div class="replies"><p>5 Replies</p></div>
+                        <div class="OP"><p>Tester</p></div>
+                        <div class="timeCreated"><p>3/9/20</p></div>
+					</div>
+                </div>
+
+                <div class="Post">
+                    <div class="postTitle">
+                        <h3>Title of Post</h3>
+                    </div>
+
+                    <div class="postBody">
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        </p>
+                    </div>
+
+                    <div class="postMeta">
+                        <div class="replies"><p>5 Replies</p></div>
+                        <div class="OP"><p>Tester</p></div>
+                        <div class="timeCreated"><p>3/9/20</p></div>
+                    </div>                    
+                </div>
+
+                <div class="Post">
+                    <div class="postTitle">
+                        <h3>Title of Post</h3>
+                    </div>
+
+                    <div class="postBody">
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        </p>
+                    </div>
+
+                    <div class="postMeta">
+                        <div class="replies"><p>5 Replies</p></div>
+                        <div class="OP"><p>Tester</p></div>
+                        <div class="timeCreated"><p>3/9/20</p></div>
+                    </div>                    
+                </div>
+
+                <div class="Post">
+                    <div class="postTitle">
+                        <h3>Title of Post</h3>
+                    </div>
+
+                    <div class="postBody">
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        </p>
+                    </div>
+
+                    <div class="postMeta">
+                        <div class="replies"><p>5 Replies</p></div>
+                        <div class="OP"><p>Tester</p></div>
+                        <div class="timeCreated"><p>3/9/20</p></div>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+        <!--------------------------------------------->
+
+        <!-- RIGHT SIDE OF THE PAGE FOR ACTIONS AVAILABLE TO USER && USER PROFILE -->
+        <div id="profileSideBar">
+            <!-- AVAIABLE ACTIONS -->
+            <div id="groupActions">
+                <div class="header">
+                    <h2>Group Actions</h2>
+                </div>
+
+                <div class="action viewMembers">
+                    <button class="btn" type="submit">View Members</button>
+                </div>
+
+                <div class="action addMembers">
+                    <button class="btn" type="submit">Add Members</button>
+                </div>
+
+                <div class="action fileSharing">
+                    <button class="btn" type="submit">Media and Files</button>
+                </div>
+
+                <div class="action meetUp">
+                    <button class="btn" type="submit">Meet Up</button>
+                </div>
+
+                <div class="action leave">
+                    <button class="btn" type="submit">Leave Group</button>
+                </div>
+            </div>
+            <!---------------------->
+            
+            <!-- PROFILE -->
+            <div class="userProfile">
+                <div class="profilePicture">
+                    <!-- default profile picture,can be changed by JS if user has profile picture -->
+                    <img id ="profilePicture" src="images/depositphotos_235978748-stock-illustration-neutral-profile-picture.jpg" alt="Profile Picture">
+                </div>
+                <div class="profileDetails">
+					<p id = "username">Username</p>
+                    <p id = "fullname">User's name</p>
+                    <p id = "date">Join date</p>
+					<p>Filigree Points: </p>
+					<button class = "btn" id="pm-button">My messages</button>
+                    <span id = "pm-status">No New Messages.</span> 
+                    
+                </div>
+                    
+            </div>
+
+            <div class = "group-btns">
+                <a class="group-btn" href="choosegroups.html">Subscribe to new groups</a>
+                <a class="group-btn" href="creategroup.html">Create a new group</a>
+            </div>
+            
+            <!------------->
+        </div>
+        <!-------------------------------------------------------------------------->
+    </body>
+</html>

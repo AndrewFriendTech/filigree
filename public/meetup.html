@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Meetup Page</title>
+        <link rel="stylesheet" href="stylesheets/meetup.css">
+        <!-- page script -->
+        <script src="javascripts/meetup/meetup.js" defer></script>
+       
+        <!-- Helper scripts -->
+        <script src = "javascripts/fetch-functions.js"></script>
+        <script src = "javascripts/connectiveList.js"></script>
+        <script src = "javascripts/dateString.js"></script>
+    </head>
+    <body>
+      <div class="triangle"></div>
+      <div class="triangle2"></div>
+
+      <div id="left">
+        <div class="box" id = "meetup-form">
+          <h1>Organise a meet up</h1>
+          <label for="selection">What group you want to make a meeting with: </label><br>
+          <select id="selection" name="subjects">
+            <option value="Default">DefaultGroup</option>
+            <option value="Default">DefaultGroup</option>
+            <option value="Default">DefaultGroup</option>
+          </select><br>
+
+          <label for= "locationContainer">Location:</label><br>
+          <input type="text" id = "locationInput"><br>
+
+          <label for="ourdate">Date:</label><br>
+          <input id="ourdate" type="date"><br>
+
+          <label for="ourtime">Time:</label><br>
+          <input id="ourtime" type="time"><br>
+
+          <input type="submit" id="submit" value="Create" class="btn">
+        </div>
+      </div>
+
+      
+      <div id="right">
+        <div class="box">
+          <h1>Upcoming meets</h1>
+        <table class="content-table">
+          <thead>
+            <tr>
+                <th>Group Name</th>
+                <th>Location</th>
+                <th>Date</th>
+            </tr>
+          </thead>
+          <tbody id = "table-body">
+            <tr>
+                <td>Alfreds Futterkiste</td>
+                <td>Maria Anders</td>
+                <td>Germany</td>
+              </tr>
+              <tr>
+                  <!-- table content is inserted here by javascript -->
+              </tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+       <!-- google maps script -->
+       <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnA_I-YpIzQygrq7bXWHne_P6eUOtiXso&libraries=places" ></script>
+    </body>
+</html>

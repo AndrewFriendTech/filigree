@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Add Group</title>
+        <!-- LINKS -->
+        <!-- reuses the stylesheet from registration as very simuluar pages -->
+		<link rel="stylesheet" href="stylesheets/registration.css">
+		<!----------->
+		<!-- SCRIPTS -->
+		<script src = "javascripts/createGroup.js"></script>
+		<script src = "javascripts/fetch-functions.js"></script>
+		<!------------->
+	</head>
+	<body>
+        <div class="triangle"></div>
+        <div class="triangle2"></div>
+
+        <!-- CONTAINER FOR FORM -->
+		<div class="container">
+            <h1>Registration</h1>
+			<!-- REGISTER FORM -->
+            <div id = "form">
+				<label for="name">Group Name:</label>
+				<input type="text" placeholder="Enter Group Name" name="name" id="name">
+				<label for="fullname">Group Description:</label>
+				<textarea type="text" placeholder="Enter Group Description" rows="4" name="description" id="description"></textarea>
+				<label for= "locationContainer">Location:</label>
+				<!-- Autocomplete adress box, using the google maps Autocomplete widget see: 
+				https://developers.google.com/maps/documentation/javascript/places-autocomplete
+				-->
+				<input type="text" id = "locationInput">
+				<!-- upload profile photo section -->
+				<form id = "uploadForm" action="/api/upload" method="post" enctype="multipart/form-data">
+					<label for="fileInput">Upload Profile Picture:</label>
+					<br>
+					<input id = "fileInput" type="file" name="avatar" />
+					<input type="submit"/> 
+				</form>				
+				<button class="btn" type="submit" id = "submit">Add Group</button>	     
+            </div>
+		    <!------------------->
+            
+        </div>
+		<!------------------------>
+		<!-- GOOGLE MAPS API (JS) -->
+		<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnA_I-YpIzQygrq7bXWHne_P6eUOtiXso&libraries=places&callback=initMap">
+		</script>
+    </body>
+</html>
